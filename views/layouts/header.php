@@ -41,66 +41,85 @@
 
     <!-- header-start -->
     <header>
-        
-            <div class="forest">
-                <img src="/template/img/forest3.jpg" alt="">
-            </div>
 
-            <div class="header-area ">
+        <div class="forest">
+            <img src="/template/img/forest3.jpg" alt="">
+        </div>
 
-                <div id="" class="main-header-area">
-                    <div class="container-fluid p-0 qwer">
-                        <div class="row align-items-center no-gutters">
-        
-                            <div class="col-xl-6 col-lg-5 p-3">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a class="active" href="/">Главная</a></li>
-                                            <li><a href="/about/">О нас</a></li>
-                                            <li><a href="/contacts/">Контакты</a></li>
-                                            <li><a href="/delivery/">Оплата и Доставка</a></li>
-                                            <li><a href="/feedback/">Обратная связь</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
+        <div class="header-area ">
+
+            <div id="" class="main-header-area">
+                <div class="container-fluid p-0 qwer">
+                    <div class="row align-items-center no-gutters">
+
+                        <div class="col-xl-6 col-lg-5 p-3">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="/">Главная</a></li>
+                                        <li><a href="/about/">О нас</a></li>
+                                        <li><a href="/contacts/">Контакты</a></li>
+                                        <li><a href="/delivery/">Оплата и Доставка</a></li>
+                                        <li><a href="/feedback/">Обратная связь</a></li>
+                                    </ul>
+                                </nav>
                             </div>
+                        </div>
 
-                            <div class="col-xl-5 col-lg-5 d-none d-lg-block">
-                                <div class="book_room">
-                                    <div class="socail_links">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-vk"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="book_btn d-none d-xl-block">
-                                        <p>+7‒913‒098‒50‒00</p>
-                                        <!-- <a class="#" href="#">​Барнаул, Социалистический проспект, 128</a> -->
-                                    </div>
+                        <div class="col-xl-5 col-lg-5 d-none d-lg-block">
+                            <div class="book_room">
+                                <div class="socail_links">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-vk"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="book_btn d-none d-xl-block">
+                                    <p>+7‒913‒098‒50‒00</p>
+                                    <!-- <a class="#" href="#">​Барнаул, Социалистический проспект, 128</a> -->
+                                </div>
 
-                                    <div class="cart">
-                                        <a href="/cart/">
-                                            <i class="fa fa-shopping-cart"></i>
+                                <div class="cart">
+                                    <a href="/cart">
+                                        <i class="fa fa-shopping-cart"></i>Корзина
+                                       (<span id="cart-count"><?php echo Cart::countItems(); ?> </span>)
+                                    </a>
+                                </div>
+                                <?php if (User::isGuest()) : ?>
+                                    <div class="auth book_btn d-none d-xl-block">
+                                        <a href="/user/login/">
+                                            <p>Вход</p>
                                         </a>
                                     </div>
-                                </div>
+                                <?php else : ?>
+                                    <div class="account book_btn d-none d-xl-block">
+                                        <a href="/cabinet/">
+                                            <p>Аккаунт</p>
+                                        </a>
+                                    </div>
+                                    <div class="exit book_btn d-none d-xl-block">
+                                        <a href="/user/logout/">
+                                            <p>Выход</p>
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
                             </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        
+        </div>
+
     </header>
     <!-- header-end -->

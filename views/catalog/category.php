@@ -50,7 +50,7 @@
                                             <p>Описание 1</p>
                                             <span><?php echo $product['price']; ?></span>
                                             <div class="iteam_links">
-                                                <a class="boxed-btn5" href="Menu.html">В корзину</a>
+                                                <a  href="/cart/addAjax/<?php echo $product['id']; ?>" class="boxed-btn5 add-to-cart" data-id = "<?php echo $product['id']; ?>">В корзину</a>
                                             </div>
                                         </div>
                                     </div>

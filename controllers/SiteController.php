@@ -1,6 +1,8 @@
 <?php
 include_once ROOT . '/models/category.php';
 include_once ROOT . '/models/product.php';
+include_once ROOT . '/models/user.php';
+include_once ROOT . '/components/cart.php';
 
 class SiteController
 {
@@ -15,4 +17,5 @@ class SiteController
         require_once(ROOT . '/views/site/index.php');
         return true;
     }
+
 }

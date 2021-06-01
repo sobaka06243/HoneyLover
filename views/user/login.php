@@ -8,9 +8,7 @@
                 <br />
                 <br />
                 <br />
-                <?php if ($result) : ?>
-                    <p>Вы зарегистрированы</p>
-                <?php else : ?>
+                <div class="auth">
                     <?php if (isset($errors) && is_array($errors)) : ?>
                         <ul>
                             <?php foreach ($errors as $error) : ?>
@@ -24,17 +22,16 @@
                         <br />
                         <br />
 
-                        <h2><a href="/user/login"> Вход</a></h2>
-                        <h2 class="active"><a href="/user/register/"> Регистрация</a></h2>
+                        <h2 class="active"><a href="/user/login"> Вход</a></h2>
+                        <h2><a href="/user/register/"> Регистрация</a></h2>
                         <form action="#" method="post">
-                            <input type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>">
                             <input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>">
                             <input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>">
-                            <input type="submit" name="submit" class="btn btn-default" value="Регистрация">
+                            <input type="submit" name="submit" class="btn btn-default" value="Вход">
                         </form>
 
                     </div>
-                <?php endif; ?>
+                </div>
                 <br />
                 <br />
             </div>

@@ -56,128 +56,23 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xl-6 col-md-6 col-lg-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 1</h3>
-                                        <p>Описание 1</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
+                            <?php foreach ($popularProducts as $popularItem) : ?>
+                                <div class="col-xl-6 col-md-6 col-lg-6">
+                                    <div class="single_delicious d-flex align-items-center">
+                                        <div class="thumb">
+                                            <img src="template/img/popular1.jpg" alt="" width="150px">
+                                        </div>
+                                        <div class="info">
+                                            <h3><a href="product/<?php echo $popularItem['id'];?>"><?php echo $popularItem['name'];?></a></h3>
+                                            <p>Описание 1</p>
+                                            <span><?php echo $popularItem['price'];?></span>
+                                            <div class="iteam_links">
+                                                <a class="boxed-btn5" href="addAjax/<?php echo $popularItem['id'];?>">В корзину</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 2</h3>
-                                        <p>Описание 2</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 3</h3>
-                                        <p>Описание 3</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-md-6 col-lg-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 4</h3>
-                                        <p>Описание 4</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 5</h3>
-                                        <p>Описание 5</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 6</h3>
-                                        <p>Описание 6</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 7</h3>
-                                        <p>Описание 7</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3>Товар 8</h3>
-                                        <p>Описание 8</p>
-                                        <span>300руб</span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
