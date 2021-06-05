@@ -21,10 +21,14 @@
 
             <div class="col-lg-4">
                 <div class="login-form">
-                    <form action="#" method="post">
+                    <form action="#" method="post" enctype="multipart/form-data">
 
                         <p>Название</p>
                         <input type="text" name="name" placeholder="" value="<?php echo $category['name']; ?>">
+
+                        <p>Изображение категории</p>
+                        <img src="<?php echo Category::getImage($category['id']); ?>" width="200" alt="" />
+                        <input type="file" name="image" placeholder="" value="<?php echo $category['image']; ?>">
 
                         <p>Порядковый номер</p>
                         <input type="text" name="sort_order" placeholder="" value="<?php echo $category['sort_order']; ?>">

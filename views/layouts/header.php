@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="/template/css/style.css">
     <link rel="stylesheet" href="/template/css/responsive.css">
 
+    <link rel="stylesheet" href="/assets/css/templatemo.css">
+
     <!-- slider -->
     <script>
         document.documentElement.className = "js";
@@ -42,31 +44,37 @@
     <!-- header-start -->
     <header>
 
-        <div class="forest">
-            <img src="/template/img/forest3.jpg" alt="">
-        </div>
 
         <div class="header-area ">
-
+            <!--             <div class="forest">
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="/template/img/forest.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div id="" class="main-header-area">
-                <div class="container-fluid p-0 qwer">
+                <div class="container-fluid p-0 ">
                     <div class="row align-items-center no-gutters">
 
-                        <div class="col-xl-6 col-lg-5 p-3">
+                        <div class="col-xl-6 col-lg-6 p-3">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="/">Главная</a></li>
-                                        <li><a href="/about/">О нас</a></li>
-                                        <li><a href="/contacts/">Контакты</a></li>
-                                        <li><a href="/delivery/">Оплата и Доставка</a></li>
-                                        <li><a href="/feedback/">Обратная связь</a></li>
+                                        <li><a class="<?php if ($index == 1) echo 'active'; ?>" href="/">Главная</a></li>
+                                        <li><a class="<?php if ($index == 2) echo 'active'; ?>" href="/category/">Каталог</a></li>
+                                        <li><a class="<?php if ($index == 3) echo 'active'; ?>" href="/about/">О нас</a></li>
+                                        <li><a class="<?php if ($index == 4) echo 'active'; ?>" href="/contacts/">Контакты</a></li>
+                                        <li><a class="<?php if ($index == 5) echo 'active'; ?>" href="/delivery/">Оплата и Доставка</a></li>
+                                        <li><a class="<?php if ($index == 6) echo 'active'; ?>" href="/feedback/">Обратная связь</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
 
-                        <div class="col-xl-5 col-lg-5 d-none d-lg-block">
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
                             <div class="book_room">
                                 <div class="socail_links">
                                     <ul>
@@ -89,11 +97,11 @@
 
                                 <div class="cart">
                                     <a href="/cart">
-                                        <i class="fa fa-shopping-cart"></i>Корзина
-                                       (<span id="cart-count"><?php echo Cart::countItems(); ?> </span>)
+                                        <i class="fa fa-shopping-cart"></i><span class="cart-word"> Корзина
+                                            (<span id="cart-count"><?php echo Cart::countItems(); ?></span>)</span>
                                     </a>
                                 </div>
-                                <?php if (User::isGuest()) : ?>
+                                <!-- <?php if (User::isGuest()) : ?>
                                     <div class="auth book_btn d-none d-xl-block">
                                         <a href="/user/login/">
                                             <p>Вход</p>
@@ -110,7 +118,7 @@
                                             <p>Выход</p>
                                         </a>
                                     </div>
-                                <?php endif; ?>
+                                <?php endif; ?> -->
                             </div>
                         </div>
                         <div class="col-12">

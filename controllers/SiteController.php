@@ -13,6 +13,9 @@ class SiteController
 
         $popularProducts = array();
         $popularProducts = Product::getPopularProducts();
+        $countCategories = count($categories);
+
+        $index = 1;
 
         require_once(ROOT . '/views/site/index.php');
         return true;

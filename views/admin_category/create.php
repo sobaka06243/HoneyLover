@@ -34,6 +34,9 @@
                         <p>Название</p>
                         <input type="text" name="name" placeholder="" value="">
 
+                        <p>Изображение категории</p>
+                        <input type="file" name="image" placeholder="" value="">
+
                         <p>Порядковый номер</p>
                         <input type="text" name="sort_order" placeholder="" value="">
 

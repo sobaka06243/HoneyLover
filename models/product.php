@@ -25,6 +25,26 @@ class Product
         return $productsList;
     }
 
+    public static function getNewProducts($count = self::SHOW_BY_DEFAULT)
+    {
+        $count = intval($count);
+        $db = Db::getConnection();
+        $productsList = array();
+        $result = $db->query('SELECT id, name, price, is_popular, image FROM product '
+            . 'WHERE status = "1" AND is_new = "1"'
+            . 'ORDER BY id '
+            . 'LIMIT ' . $count);
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $productsList[$i]['id'] = $row['id'];
+            $productsList[$i]['name'] = $row['name'];
+            $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['image'] = $row['image'];
+            $i++;
+        }
+        return $productsList;
+    }
+
     public static function getProductsListByCategory($categoryId = false, $page = 1)
     {
         if ($categoryId) {

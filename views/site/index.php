@@ -3,48 +3,68 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 " src="/template/img/slider1.jpg" alt="Первый слайд">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="/template/img/slider2.jpg" alt="Второй слайд">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="/template/img/slider3.jpg" alt="Третий слайд">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<script>
+    $('.carousel').carousel()
+</script>
+
+<!-- <div class="pieces-slider">
+    <div class="pieces-slider__slide">
+        <img class="pieces-slider__image" src="template/img/slider1.jpg" alt="">
+        <h2 class="pieces-slider__text">Текст 1fsdgdsgdsfgdrsfghsdfgjkdhjkgdfhkgjdfhjkafdsfdsfsdfdsfdsfdsfs</h2>
+    </div>
+    <div class="pieces-slider__slide">
+        <img class="pieces-slider__image" src="template/img/slider2.jpg" alt="">
+        <h2 class="pieces-slider__text">Текст 2</h2>
+    </div>
+    <div class="pieces-slider__slide">
+        <img class="pieces-slider__image" src="template/img/slider3.jpg" alt="">
+        <h2 class="pieces-slider__text">Текст 3</h2>
+    </div>
+    <!— Canvas to draw the pieces —>
+        <canvas class="pieces-slider__canvas"></canvas>
+        <!— Slider buttons: prev and next —>
+            <button class="pieces-slider__button pieces-slider__button--prev">prev</button>
+            <button class="pieces-slider__button pieces-slider__button--next">next</button>
+</div> -->
+
 <div class="products-slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="products col-2">
-                <div class="logo">
-                    <a href="#welcome">
-                        <h1>Товары</h1>
-                    </a>
-                </div>
-                <nav class="left-nav">
-                    <ul id="nav">
-                        <?php foreach ($categories as $categoryItem) : ?>
-                            <li class="current"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </nav>
-            </div>
+
+
 
             <!-- slider_area_start -->
 
-            <div class="content col-10">
+            <div class="content col-12">
                 <!-- Pieces Slider -->
-                <div class="pieces-slider">
-                    <!-- Each slide with corresponding image and text -->
-                    <div class="pieces-slider__slide">
-                        <img class="pieces-slider__image" src="template/img/slider1.jpg" alt="">
-                        <h2 class="pieces-slider__text">Текст 1</h2>
-                    </div>
-                    <div class="pieces-slider__slide">
-                        <img class="pieces-slider__image" src="template/img/slider2.jpg" alt="">
-                        <h2 class="pieces-slider__text">Текст 2</h2>
-                    </div>
-                    <div class="pieces-slider__slide">
-                        <img class="pieces-slider__image" src="template/img/slider3.jpg" alt="">
-                        <h2 class="pieces-slider__text">Текст 3</h2>
-                    </div>
-                    <!-- Canvas to draw the pieces -->
-                    <canvas class="pieces-slider__canvas"></canvas>
-                    <!-- Slider buttons: prev and next -->
-                    <button class="pieces-slider__button pieces-slider__button--prev">prev</button>
-                    <button class="pieces-slider__button pieces-slider__button--next">next</button>
-                </div>
 
                 <div class="best_burgers_area">
                     <div class="container">
@@ -55,24 +75,53 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <?php foreach ($popularProducts as $popularItem) : ?>
                                 <div class="col-xl-6 col-md-6 col-lg-6">
                                     <div class="single_delicious d-flex align-items-center">
                                         <div class="thumb">
-                                            <img src="template/img/popular1.jpg" alt="" width="150px">
+                                            <img src="<?php echo Product::getImage($popularItem['id']); ?>" alt="" width="150px">
                                         </div>
                                         <div class="info">
-                                            <h3><a href="product/<?php echo $popularItem['id'];?>"><?php echo $popularItem['name'];?></a></h3>
+                                            <h3><a href="product/<?php echo $popularItem['id']; ?>"><?php echo $popularItem['name']; ?></a></h3>
                                             <p>Описание 1</p>
-                                            <span><?php echo $popularItem['price'];?></span>
+                                            <span><?php echo $popularItem['price']; ?></span>
                                             <div class="iteam_links">
-                                                <a class="boxed-btn5" href="addAjax/<?php echo $popularItem['id'];?>">В корзину</a>
+                                                <a class="boxed-btn5 add-to-cart" href="addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
+                        </div> -->
+                        <div class="row">
+                            <?php foreach ($popularProducts as $popularItem) : ?>
+
+                                <div class="col-md-4">
+                                    <div class="card mb-4 product-wap rounded-0">
+
+                                        <div class="card rounded-0">
+                                            <a href="#" class=""><img class="card-img rounded-0 img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>"></a>
+                                            <div class="card-img-overlay rounded-0 product-overlay  d-flex align-items-center justify-content-center">
+                                                <ul class="list-unstyled">
+                                                    <li><a class="btn btn-success text-white" href="shop-single.html">В корзину&nbsp;&nbsp;</a></li>
+                                                    <li><a class="btn btn-success text-white mt-2" href="product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <a href="product/<?php echo $popularItem['id']; ?>">
+                                                <p class="text-center mb-0"><?php echo $popularItem['name']; ?></p>
+                                            </a>
+
+                                            <p class="text-center mb-0"><?php echo $popularItem['price']; ?> руб.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+
+
                         </div>
                     </div>
                 </div>
@@ -95,17 +144,13 @@
                             <div class="col-xl-5 col-lg-5 offset-lg-1 col-md-6">
                                 <div class="about_info">
                                     <div class="section_title mb-20px">
-                                        <span>О нас</span>
+                                        <span>Ваш выбор</span>
                                         <h3>Лучший мед <br>
                                             в Алтайском крае</h3>
                                     </div>
-                                    <p>Любите вкусный и натуральный мёд? И, конечно же, экологически чистый?
-
-                                        Тогда Вы нашли то, что искали!
-
-                                        Наша пасека расположена в экологически чистом районе Алтайского края. Более 10 лет мы с любовью занимаемся пчеловодством и продаём мёд. Честно и добросовестно относимся к делу, поэтому наш мёд имеет отменные вкусовые качества, хорошую текстуру и богатый витаминно-минеральный состав. Для Вас мы отбираем товары пчеловодства (перга, подмор, пчелиная пыльца, прополис, восковая моль) только лучшего качества.
-
-                                        Зарядитесь энергией и силой Алтая, укрепите свой организм вкусным и полезным лакомством!</p>
+                                    <p>Всем известно, что Алтай достаточно разновидный по географическому принципу и наделен самыми различными и богатыми медоносами. </p>
+                                    <p>Природа дарит нам один из самых удивительных продуктов пчеловодства с ярким и сочным вкусом – алтайский мед!</p>
+                                    <p>Одной из важнейших отличительных особенностей алтайского меда является его состав. Собирается пчелами с растений, которые нигде больше кроме Алтая не произрастают. Такие травы отдают продукту исключительно полезные и чудодейственные свойства. Мед Алтая ценится за сладкий и в то же время терпковатый вкус и упоительный запах разнотравья. </p>
 
                                 </div>
                             </div>

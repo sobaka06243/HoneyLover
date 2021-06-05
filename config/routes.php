@@ -5,7 +5,6 @@ return array(
 
     'category/([0-9]+)/page-([0-9]+)' => 'catalog/category/$1/$2', //actionCategory in CatalogController
     'category/([0-9]+)' => 'catalog/category/$1', //actionCategory in CatalogController
-
     'cart/checkout' => 'cart/checkout',  
     'cart/deleteAjax/([0-9]+)' => 'cart/deleteAjax/$1',
 
@@ -17,6 +16,8 @@ return array(
 
     'user/logout' => 'user/logout',
     'cabinet' => 'cabinet/index',
+
+
 
         // Управление товарами:    
     'admin/product/create' => 'adminProduct/create',
@@ -34,7 +35,18 @@ return array(
     'admin/order/view/([0-9]+)' => 'adminOrder/view/$1',
     'admin/order' => 'adminOrder/index',
     // Админпанель:
+    'category' => 'catalog/index', 
+
     'admin' => 'admin/index',
 
+    'about' => 'about/index',
+
+    'contacts' => 'contacts/index',
+
+    'delivery' => 'delivery/index',
+
+    'feedback' => 'feedback/index',
+
     '' => 'site/index', //actionIndex in SiteController 
+
 );

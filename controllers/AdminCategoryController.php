@@ -51,7 +51,16 @@ class AdminCategoryController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем новую категорию
-                Category::createCategory($name, $sortOrder, $status);
+                $id = Category::createCategory($name, $sortOrder, $status);
+
+                 // Если запись добавлена
+                 if ($id) {
+                    // Проверим, загружалось ли через форму изображение
+                    if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                        // Если загружалось, переместим его в нужную папке, дадим новое имя
+                        move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/category/{$id}.jpg");
+                    }
+                };
 
                 // Перенаправляем пользователя на страницу управлениями категориями
                 header("Location: /admin/category");
@@ -82,10 +91,21 @@ class AdminCategoryController extends AdminBase
             $status = $_POST['status'];
 
             // Сохраняем изменения
-            Category::updateCategoryById($id, $name, $sortOrder, $status);
+            if (Category::updateCategoryById($id, $name, $sortOrder, $status)) {
+
+
+                // Если запись сохранена
+                // Проверим, загружалось ли через форму изображение
+                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+
+                    // Если загружалось, переместим его в нужную папке, дадим новое имя
+                   move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/category/{$id}.jpg");
+                }
+            }
 
             // Перенаправляем пользователя на страницу управлениями категориями
             header("Location: /admin/category");
+            echo "FDDSFS";
         }
 
         // Подключаем вид

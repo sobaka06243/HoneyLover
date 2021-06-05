@@ -17,7 +17,12 @@ class CatalogController
         $categoryProducts = array();
         $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
 
+
+
+
         $total = Product::getTotalProductsInCategory($categoryId);
+
+        $countCategories = count($categories);
 
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
 
@@ -25,4 +30,23 @@ class CatalogController
 
         return true;
     }
+
+    public function actionIndex()
+    {
+        
+        $categories = array();
+        $categories = Category::getCategoriesList();
+
+        $newProducts = array();
+        $newProducts = Product::getNewProducts();
+
+        $countCategories = count($categories);
+        $index = 2;
+
+        require_once(ROOT . '/views/catalog/index.php');
+        return true;
+    }
+
+
+
 }

@@ -6,19 +6,13 @@
 <div class="products-slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="products col-2">
-                <div class="logo">
-                    <a href="#welcome">
-                        <h1>Товары</h1>
-                    </a>
-                </div>
-                <nav class="left-nav">
-                    <ul id="nav">
-                        <?php foreach ($categories as $categoryItem) : ?>
-                            <li class="current <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </nav>
+            <div class="sidebar-categories col-2">
+                <div class="head">Категории</div>
+                <ul class="main-categories">
+                    <?php foreach ($categories as $categoryItem) : ?>
+                        <li class="current main-nav-list <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
 
             <!-- slider_area_start -->
