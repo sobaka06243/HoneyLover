@@ -2,7 +2,7 @@
 
 class Product
 {
-    const SHOW_BY_DEFAULT = 8;
+    const SHOW_BY_DEFAULT = 9;
 
     public static function getPopularProducts($count = self::SHOW_BY_DEFAULT)
     {

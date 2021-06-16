@@ -6,24 +6,21 @@
 <div class="products-slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="products col-2">
-                <div class="logo">
-                    <a href="#welcome">
-                        <h1>Товары</h1>
-                    </a>
-                </div>
-                <nav class="left-nav">
-                    <ul id="nav">
+        <div class="col-3 p-1">
+                <div class="sidebar-categories">
+                    <div class="head">Категории</div>
+                    <ul class="main-categories">
                         <?php foreach ($categories as $categoryItem) : ?>
-                            <li class="current <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
+                            <li class="current main-nav-list <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
-                </nav>
+                </div>
+
             </div>
 
 
 
-            <div class="content col-10" id="cart-products">
+            <div class="content col-9 p-1" id="cart-products">
                 <div class="col-sm-9 padding-right">
                     <div class="features_items">
                         <h2 class="title text-center">Корзина</h2>

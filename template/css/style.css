@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800|Pacifico|Paytone+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap");
 
+
 @font-face { 
   font-family: "OpenSans-ExtraBold";
   src: url("../fonts/OpenSans-ExtraBold.eot");
@@ -427,7 +428,6 @@ p {
 
 /* line 1, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_header.scss */
 .header-area {
-  position: absolute;
   left: 0;
   right: 0;
   width: 100%;
@@ -828,7 +828,7 @@ p {
 
 /*START КАТАЛОГ ТОВАРОВ*/
 .products-slider{
-  padding-top: 131px;
+  padding-top: 50px;
 }
 
 
@@ -947,7 +947,7 @@ p {
 }
 .sidebar-categories .head {
   line-height: 60px;
-  background: #F2C64D;
+  background: lightsteelblue;
   padding: 0 10px;
   font-size: 16px;
   font-weight: 400;
@@ -1540,6 +1540,10 @@ END СЧАСТЛИВЫЕ КЛИЕНТЫ
 
 /*START КОНТАКТЫ*/
 
+.contacts{
+  padding-top: 20px;
+}
+
 .contacts .cont {
   text-align: center;
   margin-bottom: 50px;
@@ -1548,13 +1552,8 @@ END СЧАСТЛИВЫЕ КЛИЕНТЫ
 .contacts .media .ti-home {
   font-size: 20px;
 }
-.contacts .media{
-  
-}
-.contacts .media .icon{
-  
-}
-.contacts .media .
+
+
 
 .map{
   margin: 0 auto;
@@ -1563,8 +1562,9 @@ END СЧАСТЛИВЫЕ КЛИЕНТЫ
 .card img:hover{
   opacity: 0.9;
 }
-.cart{
+.cart-word{
   position: relative;
+  font-family: "OpenSans-ExtraBold";
 }
 
 
@@ -1577,8 +1577,9 @@ END СЧАСТЛИВЫЕ КЛИЕНТЫ
   font-size: 20px;
 }
 
-
-
+.catalog h1{
+  padding-left: 50px;
+}
 
 
 
@@ -1673,3 +1674,50 @@ margin-right: 5px;
 }
 }
 
+
+
+  .col-12, .col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+  padding:0px;
+}  
+.row{
+  margin:0px;
+}
+
+.fa {
+  font-size: 30px;
+}
+
+.pl-5 {
+  padding-left: 100px !important;
+
+}
+
+.about-area{
+  padding-top: 20px;
+}
+.about-area .text p{
+  font-family: "Comic Sans MS";
+  font-weight: bold !important;
+  
+  font-size: 25px !important;
+}
+.about-area .text{
+  padding: 40px;
+}
+
+.contact-section{
+  padding-top: 40px;
+}
+
+.delivery{
+  padding-top: 30px;
+}
+
+
+
+.delivery .text p{
+  font-family: "Comic Sans MS";
+  font-weight: bold !important;
+  padding: 30px;
+  font-size: 25px !important;
+}

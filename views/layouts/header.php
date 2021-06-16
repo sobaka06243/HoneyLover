@@ -46,20 +46,20 @@
 
 
         <div class="header-area ">
-            <!--             <div class="forest">
+            <div class="fa">
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-12">
-                            <img src="/template/img/forest.jpg" alt="">
+                            <img src="/template/img/logo.png" alt="" class="img-fluid p-0">
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div id="" class="main-header-area">
                 <div class="container-fluid p-0 ">
                     <div class="row align-items-center no-gutters">
 
-                        <div class="col-xl-6 col-lg-6 p-3">
+                        <div class="col-xl-7 col-lg-6 p-0">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
@@ -74,17 +74,17 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
+                        <div class="col-xl-5 col-lg-6 d-none d-lg-block">
                             <div class="book_room">
                                 <div class="socail_links">
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a href="https://www.instagram.com/lyubitel_meda/">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="https://vk.com/public196266468">
                                                 <i class="fa fa-vk"></i>
                                             </a>
                                         </li>

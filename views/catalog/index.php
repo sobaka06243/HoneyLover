@@ -30,15 +30,7 @@
         </div>
     </div>
 </div> -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 
 
@@ -46,7 +38,7 @@
 <!-- Start Content -->
 <div class="container py-5 catalog">
     <div class="row">
-        <div class="col-12 ">
+        <div class="col-12 pl-5">
             <h1>Новые товары</h1>
         </div>
     </div>
@@ -76,14 +68,14 @@
                                 <a href="#" class=""><img class="card-img rounded-0 img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>"></a>
                                 <div class="card-img-overlay rounded-0 product-overlay  d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html">В корзину&nbsp;&nbsp;</a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
+                                        <li><a class="btn btn-success text-white add-to-cart" href="/cart/addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину&nbsp;&nbsp;</a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="/product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="card-body">
-                                <a href="product/<?php echo $popularItem['id']; ?>">
+                                <a href="/product/<?php echo $popularItem['id']; ?>">
                                     <p class="text-center mb-0"><?php echo $popularItem['name']; ?></p>
                                 </a>
 

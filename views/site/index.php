@@ -5,7 +5,7 @@
 
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide p-0" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -13,13 +13,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100 " src="/template/img/slider1.jpg" alt="Первый слайд">
+            <img class="d-block w-100 " src="/template/img/slider1.png" alt="Первый слайд">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="/template/img/slider2.jpg" alt="Второй слайд">
+            <img class="d-block w-100" src="/template/img/slider2.png" alt="Второй слайд">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="/template/img/slider3.jpg" alt="Третий слайд">
+            <img class="d-block w-100" src="/template/img/slider1.png" alt="Третий слайд">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -31,9 +31,9 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-<script>
+<!-- <script>
     $('.carousel').carousel()
-</script>
+</script> -->
 
 <!-- <div class="pieces-slider">
     <div class="pieces-slider__slide">
@@ -104,8 +104,8 @@
                                             <a href="#" class=""><img class="card-img rounded-0 img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>"></a>
                                             <div class="card-img-overlay rounded-0 product-overlay  d-flex align-items-center justify-content-center">
                                                 <ul class="list-unstyled">
-                                                    <li><a class="btn btn-success text-white" href="shop-single.html">В корзину&nbsp;&nbsp;</a></li>
-                                                    <li><a class="btn btn-success text-white mt-2" href="product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
+                                                    <li><a class="btn btn-success text-white add-to-cart" href="/cart/addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину&nbsp;&nbsp;</a></li>
+                                                    <li><a class="btn btn-success text-white mt-2" href="/product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
                                                 </ul>
                                             </div>
                                         </div>

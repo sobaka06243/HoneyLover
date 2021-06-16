@@ -17,46 +17,32 @@
 
             <!-- slider_area_start -->
 
-            <div class="content col-10">
-
-                <div class="best_burgers_area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section_title text-center mb-80">
-
-                                    <h3></h3>
-
-                                </div>
+            <!-- Open Content -->
+            <div class=" col-9">
+                <div class="container pb-5">
+                    <div class="row">
+                        <div class="col-lg-5 mt-5">
+                            <div class="card mb-3">
+                                <img class="card-img img-fluid" src="<?php echo Product::getImage($product['id']); ?>" alt="Card image cap" id="product-detail">
                             </div>
+
                         </div>
-                        <div class="row">
-
-                            <div class="col-xl-6 col-md-6 col-lg-6">
-                                <div class="single_delicious d-flex align-items-center">
-                                    <div class="thumb">
-                                        <img src="/template/img/popular1.jpg" alt="" width="150px">
-                                    </div>
-                                    <div class="info">
-                                        <h3><?php echo $product['name']; ?></h3>
-                                        <p>Описание 1</p>
-                                        <span><?php echo $product['price']; ?></span>
-                                        <div class="iteam_links">
-                                            <a class="boxed-btn5" href="Menu.html">В корзину</a>
-                                        </div>
-                                    </div>
+                        <!-- col end -->
+                        <div class="col-lg-7 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1 class="h2"><?php echo $product['name']; ?></h1>
+                                    <p class="h3 py-2">Цена: <?php echo $product['price']; ?> руб.</p>
+                                    <h4>Описание:</h4>
+                                    <p><?php echo $product['description']; ?></p>
+                                    <a class="btn btn-warning text-white add-to-cart" href="/cart/addAjax/<?php echo $product['id']; ?>" data-id="<?php echo $product['id']; ?>">В корзину&nbsp;&nbsp;</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- features_room_startt -->
-
-
-
-
             </div>
+            <!-- Close Content -->
 
         </div>
 

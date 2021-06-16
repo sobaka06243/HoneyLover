@@ -1,14 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 
 <!-- ================ contact section start ================= -->

@@ -14,6 +14,7 @@ class ProductController
         $product = Product::getProductById($productId);
 
         $popularProducts = Product::getPopularProducts();
+        $index = 2;
 
         require_once(ROOT . '/views/product/view.php');
 

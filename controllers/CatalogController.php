@@ -25,6 +25,7 @@ class CatalogController
         $countCategories = count($categories);
 
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
+        $index = 2;
 
         require_once(ROOT . '/views/catalog/category.php');
 

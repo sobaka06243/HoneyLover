@@ -1,14 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 
 <div class="contacts">
@@ -54,7 +46,7 @@
                 <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
                 <script charset="utf-8">
                     new DGWidgetLoader({
-                               "width": 3000,
+                               "width": 1000,
                               "height": 600, 
                         "borderColor": "#a3a3a3",
                         "pos": {
