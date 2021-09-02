@@ -4,26 +4,28 @@
     <div class="container">
         <div class="row">
 
-            <br/>
+            <div class="col-12">
+                <div class="breadcrumbs">
+                    <ol class="breadcrumb">
+                        <li><a href="/admin">Админпанель/</a></li>
+                        <li><a href="/admin/category">Управление категориями/</a></li>
+                        <li class="active">Удалить категорию</li>
+                    </ol>
+                </div>
 
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/category">Управление категориями</a></li>
-                    <li class="active">Удалить категорию</li>
-                </ol>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h4>Удалить категорию #<?php echo $id; ?></h4>
 
 
-            <h4>Удалить категорию #<?php echo $id; ?></h4>
+                <p>Вы действительно хотите удалить эту категорию?</p>
 
-
-            <p>Вы действительно хотите удалить эту категорию?</p>
-
-            <form method="post">
-                <input type="submit" name="submit" value="Удалить" />
-            </form>
-
+                <form method="post">
+                    <input type="submit" name="submit" value="Удалить" />
+                </form>
+            </div>
         </div>
     </div>
 </section>

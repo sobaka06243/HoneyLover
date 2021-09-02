@@ -5,22 +5,18 @@
 
 <!-- Start Content -->
 
-<div class="container py-5 catalog">
-    <div class="row">
-        <div class="col-12 ">
-            <?php foreach ($categories as $categoryItem) : ?>
-                <h1><?php if($categoryItem['id'] == $categoryId) echo $categoryItem['name']; ?></h1>
-            <?php endforeach; ?>
-        </div>
-    </div>
+<div class="container-fluid py-5 catalog">
+
     <div class="row">
 
         <div class="col-lg-3">
             <div class="sidebar-categories">
-                <div class="head">Категории</div>
+                <a href="#">
+                    <div class="head"><i class="fa fa-bars"></i>Категории</div>
+                </a>
                 <ul class="main-categories">
                     <?php foreach ($categories as $categoryItem) : ?>
-                        <li class="current main-nav-list <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
+                        <li class=" menu-element current main-nav-list <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -29,32 +25,41 @@
 
         <div class="col-lg-9">
             <div class="row">
+                <div class="col-12 text-center section_title p-3">
+                    <?php foreach ($categories as $categoryItem) : ?>
+                        <h1><?php if ($categoryItem['id'] == $categoryId) echo $categoryItem['name']; ?></h1>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="row">
 
                 <?php foreach ($categoryProducts as $popularItem) : ?>
 
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-
-                            <div class="card rounded-0">
-                                <a href="#" class=""><img class="card-img rounded-0 img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>"></a>
-                                <div class="card-img-overlay rounded-0 product-overlay  d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white add-to-cart" href="/cart/addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину&nbsp;&nbsp;</a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="/product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
-                                    </ul>
+                                <div class="col-sm-6 col-md-4 col-lg-4 product-container">
+                                    <div class="product">
+                                        <a href="/product/<?php echo $popularItem['id']; ?>" class="img-prod"><img class="img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>" alt="Colorlib Template"></a>
+                                        <div class="text py-3 px-3">
+                                            <div class="info">
+                                                <h3><a href="/product/<?php echo $popularItem['id']; ?>"><?php echo $popularItem['name']; ?></a></h3>
+                                                <div class="d-flex">
+                                                    <div class="pricing">
+                                                        <p class="price"><span><?php echo $popularItem['price']; ?> руб.</span></p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                            <div class="btn-add">
+                                                <p class="bottom-area d-flex">
+                                                    <a class="btn btn-outline-dark     add-to-cart text-center" href="/cart/addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card-body">
-                                <a href="/product/<?php echo $popularItem['id']; ?>">
-                                    <p class="text-center mb-0"><?php echo $popularItem['name']; ?></p>
-                                </a>
-
-                                <p class="text-center mb-0"><?php echo $popularItem['price']; ?> руб.</p>
-                            </div>
-                        </div>
-                    </div>
                 <?php endforeach; ?>
+
+
                 <div class="pagination-block">
                     <?php echo $pagination->get(); ?>
                 </div>

@@ -19,7 +19,7 @@
             <img class="d-block w-100" src="/template/img/slider2.png" alt="Второй слайд">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="/template/img/slider1.png" alt="Третий слайд">
+            <img class="d-block w-100" src="/template/img/slider3.png" alt="Третий слайд">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -31,29 +31,6 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-<!-- <script>
-    $('.carousel').carousel()
-</script> -->
-
-<!-- <div class="pieces-slider">
-    <div class="pieces-slider__slide">
-        <img class="pieces-slider__image" src="template/img/slider1.jpg" alt="">
-        <h2 class="pieces-slider__text">Текст 1fsdgdsgdsfgdrsfghsdfgjkdhjkgdfhkgjdfhjkafdsfdsfsdfdsfdsfdsfs</h2>
-    </div>
-    <div class="pieces-slider__slide">
-        <img class="pieces-slider__image" src="template/img/slider2.jpg" alt="">
-        <h2 class="pieces-slider__text">Текст 2</h2>
-    </div>
-    <div class="pieces-slider__slide">
-        <img class="pieces-slider__image" src="template/img/slider3.jpg" alt="">
-        <h2 class="pieces-slider__text">Текст 3</h2>
-    </div>
-    <!— Canvas to draw the pieces —>
-        <canvas class="pieces-slider__canvas"></canvas>
-        <!— Slider buttons: prev and next —>
-            <button class="pieces-slider__button pieces-slider__button--prev">prev</button>
-            <button class="pieces-slider__button pieces-slider__button--next">next</button>
-</div> -->
 
 <div class="products-slider">
     <div class="container-fluid">
@@ -75,53 +52,31 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="row">
-                            <?php foreach ($popularProducts as $popularItem) : ?>
-                                <div class="col-xl-6 col-md-6 col-lg-6">
-                                    <div class="single_delicious d-flex align-items-center">
-                                        <div class="thumb">
-                                            <img src="<?php echo Product::getImage($popularItem['id']); ?>" alt="" width="150px">
-                                        </div>
-                                        <div class="info">
-                                            <h3><a href="product/<?php echo $popularItem['id']; ?>"><?php echo $popularItem['name']; ?></a></h3>
-                                            <p>Описание 1</p>
-                                            <span><?php echo $popularItem['price']; ?></span>
-                                            <div class="iteam_links">
-                                                <a class="boxed-btn5 add-to-cart" href="addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div> -->
                         <div class="row">
                             <?php foreach ($popularProducts as $popularItem) : ?>
-
-                                <div class="col-md-4">
-                                    <div class="card mb-4 product-wap rounded-0">
-
-                                        <div class="card rounded-0">
-                                            <a href="#" class=""><img class="card-img rounded-0 img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>"></a>
-                                            <div class="card-img-overlay rounded-0 product-overlay  d-flex align-items-center justify-content-center">
-                                                <ul class="list-unstyled">
-                                                    <li><a class="btn btn-success text-white add-to-cart" href="/cart/addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину&nbsp;&nbsp;</a></li>
-                                                    <li><a class="btn btn-success text-white mt-2" href="/product/<?php echo $popularItem['id']; ?>">Подробнее</a></li>
-                                                </ul>
+                                <div class="col-sm-6 col-md-4 col-lg-4 product-container">
+                                    <div class="product">
+                                        <a href="/product/<?php echo $popularItem['id']; ?>" class="img-prod"><img class="img-fluid" src="<?php echo Product::getImage($popularItem['id']); ?>" alt="Colorlib Template"></a>
+                                        <div class="text py-3 px-3">
+                                            <div class="info">
+                                                <h3><a href="/product/<?php echo $popularItem['id']; ?>"><?php echo $popularItem['name']; ?></a></h3>
+                                                <div class="d-flex">
+                                                    <div class="pricing">
+                                                        <p class="price"><span><?php echo $popularItem['price']; ?> руб.</span></p>
+                                                    </div>
+                                                </div>
+                                                <hr>
                                             </div>
-                                        </div>
-
-                                        <div class="card-body">
-                                            <a href="product/<?php echo $popularItem['id']; ?>">
-                                                <p class="text-center mb-0"><?php echo $popularItem['name']; ?></p>
-                                            </a>
-
-                                            <p class="text-center mb-0"><?php echo $popularItem['price']; ?> руб.</p>
+                                            <div class="btn-add">
+                                                <p class="bottom-area d-flex">
+                                                    <a class="btn btn-outline-dark     add-to-cart text-center" href="/cart/addAjax/<?php echo $popularItem['id']; ?>" data-id="<?php echo $popularItem['id']; ?>">В корзину</a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                             <?php endforeach; ?>
-
-
                         </div>
                     </div>
                 </div>
@@ -133,12 +88,10 @@
                         <div class="row align-items-center">
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="about_thumb2">
-                                    <div class="img_1">
-                                        <img src="template/img/aboutus1.jpg" alt="">
-                                    </div>
-                                    <div class="img_2">
+
+                                   
                                         <img src="template/img/aboutus33.jpg" alt="">
-                                    </div>
+                                   
                                 </div>
                             </div>
                             <div class="col-xl-5 col-lg-5 offset-lg-1 col-md-6">
@@ -178,9 +131,7 @@
                                                 <div class="single_testmonial text-center">
                                                     <p>Отличный мёд, самый вкусный, который пробовала) помимо мёда, огромный ассортимент товаров в подарок и для души)</p>
                                                     <div class="testmonial_author">
-                                                        <div class="thumb">
-                                                            <img src="template/img/testmonial/1.png" alt="">
-                                                        </div>
+       
                                                         <h4>Александра Атанян</h4>
                                                         <div class="stars">
                                                             <i class="fa fa-star"></i>
@@ -200,9 +151,7 @@
                                                 <div class="single_testmonial text-center">
                                                     <p>Очень обходительные сотрудники, доступно проконсультировали о продукции. Огромное спасибо за вкусный и свежий мёд! Будем вас обязательно советовать друзьям и знакомым.</p>
                                                     <div class="testmonial_author">
-                                                        <div class="thumb">
-                                                            <img src="template/img/testmonial/2.png" alt="">
-                                                        </div>
+    
                                                         <h4>​Инна Писанова</h4>
                                                         <div class="stars">
                                                             <i class="fa fa-star"></i>
@@ -222,9 +171,7 @@
                                                 <div class="single_testmonial text-center">
                                                     <p>Широкий ассортимент, вежливый и грамотный продавец. Бесплатная дегустация.</p>
                                                     <div class="testmonial_author">
-                                                        <div class="thumb">
-                                                            <img src="template/img/testmonial/3.png" alt="">
-                                                        </div>
+
                                                         <h4>Виктор Агафонов</h4>
                                                         <div class="stars">
                                                             <i class="fa fa-star"></i>

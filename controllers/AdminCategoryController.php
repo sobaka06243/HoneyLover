@@ -1,5 +1,10 @@
 <?php
-
+include_once ROOT . '/models/category.php';
+include_once ROOT . '/components/cart.php';
+include_once ROOT . '/models/product.php';
+include_once ROOT . '/components/Pagination.php';
+include_once ROOT . '/models/user.php';
+include_once ROOT . '/components/adminBase.php';
 /**
  * Контроллер AdminCategoryController
  * Управление категориями товаров в админпанели
@@ -53,14 +58,7 @@ class AdminCategoryController extends AdminBase
                 // Добавляем новую категорию
                 $id = Category::createCategory($name, $sortOrder, $status);
 
-                 // Если запись добавлена
-                 if ($id) {
-                    // Проверим, загружалось ли через форму изображение
-                    if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-                        // Если загружалось, переместим его в нужную папке, дадим новое имя
-                        move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/category/{$id}.jpg");
-                    }
-                };
+
 
                 // Перенаправляем пользователя на страницу управлениями категориями
                 header("Location: /admin/category");
@@ -89,23 +87,10 @@ class AdminCategoryController extends AdminBase
             $name = $_POST['name'];
             $sortOrder = $_POST['sort_order'];
             $status = $_POST['status'];
-
-            // Сохраняем изменения
-            if (Category::updateCategoryById($id, $name, $sortOrder, $status)) {
-
-
-                // Если запись сохранена
-                // Проверим, загружалось ли через форму изображение
-                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-
-                    // Если загружалось, переместим его в нужную папке, дадим новое имя
-                   move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/category/{$id}.jpg");
-                }
-            }
+            Category::updateCategoryById($id,$name,$sortOrder,$status);
 
             // Перенаправляем пользователя на страницу управлениями категориями
             header("Location: /admin/category");
-            echo "FDDSFS";
         }
 
         // Подключаем вид

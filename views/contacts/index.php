@@ -6,47 +6,27 @@
 <div class="contacts">
     <div class="container-fluid">
         <div class="row">
-            <div class="cont col-12  center-block">
-                <h1 class="center-block">Наши контакты</h1>
+            <div class="cont col-12 section_title">
+                <h3>Наши контакты</h3>
             </div>
         </div>
         <div class="row">
-            <div class="media contact-info col-12">
-                <div class="icon">
-                    <span class="contact-info__icon"><i class="ti-home"></i>Адрес:</span>
-                </div>
-                <div class="media-body">
-                    <h3>Алтайский край, Барнаул, Социалистический проспекст, 128</h3>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="media contact-info col-12">
-                <span class="contact-info__icon"><i class="ti-tablet"></i>Телефон:</span>
-                <div class="media-body">
-                    <h3>+7‒913‒098‒50‒00</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="media contact-info col-12">
-                <span class="contact-info__icon"><i class="ti-email"></i>Почта:</span>
-                <div class="media-body">
-                    <h3>support@colorlib.com</h3>
-                </div>
+            <div class="contact-info col-12  text-center w-50 mx-auto">
+                <p><i class="ti-home"></i>Адрес: Алтайский край, Барнаул, Социалистический проспекст, 128</p>
+                <p><i class="ti-tablet"></i>Телефон: +7‒913‒098‒50‒00</p>
+                <p><i class="ti-email"></i>Почта: andru314@mail.ru</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="map col-12 ">
+            <div class="map col-12 text-center">
                 <a class="dg-widget-link" href="http://2gis.ru/barnaul/firm/70000001043831066/center/83.7651300430298,53.34955224678227/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Барнаула</a>
                 <div class="dg-widget-link"><a href="http://2gis.ru/barnaul/firm/70000001043831066/photos/70000001043831066/center/83.7651300430298,53.34955224678227/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div>
                 <div class="dg-widget-link"><a href="http://2gis.ru/barnaul/center/83.765132,53.34931/zoom/16/routeTab/rsType/bus/to/83.765132,53.34931╎Любитель мёда, эко-лавка?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Любитель мёда, эко-лавка</a></div>
                 <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
                 <script charset="utf-8">
                     new DGWidgetLoader({
-                               "width": 1000,
+                               "width": 500,
                               "height": 600, 
                         "borderColor": "#a3a3a3",
                         "pos": {

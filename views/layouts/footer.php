@@ -59,7 +59,7 @@
 <script src='/template/js/pieces.min.js'></script>
 <script src='/template/js/demo.js'></script>
 
-
+<script src='/template/js/btnSlide.js'></script>
 
 <!-- Categories -->
     <!-- <script src="assets/js/jquery-1.11.0.min.js"></script>

@@ -7,6 +7,7 @@
     <title>Любитель меда</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="2ac182aa0af92f03" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
@@ -14,29 +15,26 @@
 
     <!-- CSS here -->
     <link rel="stylesheet" href="/template/css/bootstrap.min.css">
+    <!-- Comment -->
     <link rel="stylesheet" href="/template/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/template/css/magnific-popup.css">
+    <!-- Commen Stars -->
     <link rel="stylesheet" href="/template/css/font-awesome.min.css">
+    <!-- Commen Arrows -->
     <link rel="stylesheet" href="/template/css/themify-icons.css">
-    <link rel="stylesheet" href="/template/css/nice-select.css">
-    <link rel="stylesheet" href="/template/css/flaticon.css">
-    <link rel="stylesheet" href="/template/css/animate.css">
-    <link rel="stylesheet" href="/template/css/slicknav.css">
+    <!-- Comment animate -->
+    <link rel="stylesheet" href="/template/css/animate.css"> 
+    
     <link rel="stylesheet" href="/template/css/style.css">
-    <link rel="stylesheet" href="/template/css/responsive.css">
+    <!-- Burger menu -->
+    <link rel="stylesheet" href="/template/css/slicknav.css">
 
     <link rel="stylesheet" href="/assets/css/templatemo.css">
+    
 
-    <!-- slider -->
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function() {
-            var e, t = document.createElement("style");
-            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-        };
-        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-    </script>
-    <link rel="stylesheet" type="text/css" href="/template/css/slider.css" />
+
+
+    <script src="/template/js/jquery.js"></script>
+
 </head>
 
 <body>
@@ -57,9 +55,9 @@
             </div>
             <div id="" class="main-header-area">
                 <div class="container-fluid p-0 ">
-                    <div class="row align-items-center no-gutters">
+                    <div class="row align-items-center no-gutters p-0">
 
-                        <div class="col-xl-7 col-lg-6 p-0">
+                        <div class="col-xl-8 col-lg-6 p-0 d-none d-lg-block">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
@@ -74,7 +72,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-5 col-lg-6 d-none d-lg-block">
+                        <div class="col-xl-4 col-lg-6 col-md-4 col-sm-5 col-7 p-0">
                             <div class="book_room">
                                 <div class="socail_links">
                                     <ul>
@@ -95,33 +93,15 @@
                                     <!-- <a class="#" href="#">​Барнаул, Социалистический проспект, 128</a> -->
                                 </div>
 
-                                <div class="cart">
+                                <div class="cart d-block">
                                     <a href="/cart">
                                         <i class="fa fa-shopping-cart"></i><span class="cart-word"> Корзина
                                             (<span id="cart-count"><?php echo Cart::countItems(); ?></span>)</span>
                                     </a>
                                 </div>
-                                <!-- <?php if (User::isGuest()) : ?>
-                                    <div class="auth book_btn d-none d-xl-block">
-                                        <a href="/user/login/">
-                                            <p>Вход</p>
-                                        </a>
-                                    </div>
-                                <?php else : ?>
-                                    <div class="account book_btn d-none d-xl-block">
-                                        <a href="/cabinet/">
-                                            <p>Аккаунт</p>
-                                        </a>
-                                    </div>
-                                    <div class="exit book_btn d-none d-xl-block">
-                                        <a href="/user/logout/">
-                                            <p>Выход</p>
-                                        </a>
-                                    </div>
-                                <?php endif; ?> -->
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-8 col-sm-7 col-5">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>

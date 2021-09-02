@@ -6,11 +6,13 @@
 <div class="products-slider">
     <div class="container-fluid">
         <div class="row">
-            <div class="sidebar-categories col-2">
-                <div class="head">Категории</div>
+            <div class="sidebar-categories col-lg-3">
+                <a href="#">
+                    <div class="head"><i class="fa fa-bars"></i>Категории</div>
+                </a>
                 <ul class="main-categories">
                     <?php foreach ($categories as $categoryItem) : ?>
-                        <li class="current main-nav-list <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
+                        <li class=" menu-element current main-nav-list <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"><a href="/category/<?php echo $categoryItem['id']; ?>"><?php echo $categoryItem['name']; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -18,7 +20,7 @@
             <!-- slider_area_start -->
 
             <!-- Open Content -->
-            <div class=" col-9">
+            <div class=" col-lg-9">
                 <div class="container pb-5">
                     <div class="row">
                         <div class="col-lg-5 mt-5">
@@ -35,7 +37,7 @@
                                     <p class="h3 py-2">Цена: <?php echo $product['price']; ?> руб.</p>
                                     <h4>Описание:</h4>
                                     <p><?php echo $product['description']; ?></p>
-                                    <a class="btn btn-warning text-white add-to-cart" href="/cart/addAjax/<?php echo $product['id']; ?>" data-id="<?php echo $product['id']; ?>">В корзину&nbsp;&nbsp;</a>
+                                    <a class="btn btn-outline-dark  add-to-cart" href="/cart/addAjax/<?php echo $product['id']; ?>" data-id="<?php echo $product['id']; ?>">В корзину&nbsp;&nbsp;</a>
                                 </div>
                             </div>
                         </div>
